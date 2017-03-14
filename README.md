@@ -14,5 +14,5 @@ mysql> source c:\1_DDL.txt;
 #### Deliverables  
   
 Part 1 - DDL -> 1_DDL.txt  
-Part 2 - ALL 4 DML (a, b, c & d) questions -> 2_DML.txt  
-Part 3 - php files -> wamp\www\*  
+Part 2 - All 4 DML (a, b, c & d) questions -> 2_DML.txt  
+Part 3 - php files -> \wamp\www\\*  
