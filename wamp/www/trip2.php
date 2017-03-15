@@ -5,7 +5,7 @@ include("connection.php");
 
 <html>
 <head>
-	<title>Sample Page</title>
+	<title>Trip</title>
 </head>
 <body>
 
@@ -17,6 +17,7 @@ include("connection.php");
 	$tripdate = '2222-01-01';
 	$s_triptime = '00:00';
 	$e_triptime = '23:59';
+	$numofrecords = 0;
 	
 	if (isset($_POST['trip_submit'])){
 		$servicenumber = $_POST['servicenumber'];
@@ -58,6 +59,8 @@ include("connection.php");
 								t.TripTime between '$s_triptime' and '$e_triptime'
 								order by triptime, routenumber
 							");
+	
+	$numofrecords = mysqli_num_rows($result1);
 
 ?>
 
@@ -86,6 +89,11 @@ include("connection.php");
 	
 ?>
 <h1>Trip Results</h1>
+<?php 
+	if($numofrecords > 0) {
+		echo $numofrecords .' records returned';
+	}
+?>
 <table width="100%" border="1" cellspacing="1" cellpadding="4">
 	<tr>
 	<td width="16%">Trip Date</td>
@@ -97,7 +105,7 @@ include("connection.php");
 	</tr>
 	<?php
 	
-	if(mysqli_num_rows($result1) > 0){
+	if($numofrecords > 0){
 		while($row = $result1->fetch_assoc()) 
 		{
 			echo 

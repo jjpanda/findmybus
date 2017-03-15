@@ -13,6 +13,8 @@ include("connection.php");
 
 <?php
 	$servicenumber = '';
+	$numofrecords1 = 0;
+	$numofrecords2 = 0;
 	
 	if (isset($_POST['service_submit'])){
 		
@@ -42,7 +44,8 @@ include("connection.php");
 								br.servicenumber = '$servicenumber'
 								order by br.stoporder");
 
-
+	$numofrecords1 = mysqli_num_rows($result1);
+	$numofrecords2 = mysqli_num_rows($result2);
 ?>
 
 <FORM NAME ="search_service" METHOD ="POST" ACTION = "service.php">
@@ -54,6 +57,11 @@ include("connection.php");
 	
 ?>
 <h1>ROUTE 1</h1>
+<?php 
+	if($numofrecords1 > 0) {
+		echo $numofrecords1 .' records returned';
+	}
+?>
 <table width="100%" border="1" cellspacing="1" cellpadding="4">
 	<tr>
 	<td width="30%">Stop number</td>
@@ -62,7 +70,7 @@ include("connection.php");
 	</tr>
 	<?php
 	
-	if(mysqli_num_rows($result1) > 0){
+	if($numofrecords1 > 0){
 		while($row = $result1->fetch_assoc()) 
 		{
 			echo 
@@ -86,8 +94,9 @@ include("connection.php");
 	?>
 </table>
 <?php
-	if(mysqli_num_rows($result2) > 0){
+	if($numofrecords2 > 0){
 		echo '<h1>ROUTE 2</h1>';
+		echo $numofrecords1 .' records returned';
 		echo '
 			<table width="100%" border="1" cellspacing="1" cellpadding="4">
 				<tr>

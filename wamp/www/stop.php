@@ -5,7 +5,7 @@ include("connection.php");
 
 <html>
 <head>
-	<title>Sample Page</title>
+	<title>Stop</title>
 </head>
 <body>
 
@@ -13,6 +13,7 @@ include("connection.php");
 
 <?php
 	$stopnumber = '99999';
+	$numofrecords = 0;
 	
 	if (isset($_POST['stop_submit'])){
 		
@@ -30,7 +31,7 @@ include("connection.php");
 								(bs.StopNumber like '%$stopnumber%' or bs.StopNumber like '%$stopnumber' or bs.StopNumber like '$stopnumber%')
 								group by bs.stopnumber");
 
-
+	$numofrecords = mysqli_num_rows($result1);
 ?>
 
 <FORM NAME ="stop_service" METHOD ="POST" ACTION = "stop.php">
@@ -42,6 +43,11 @@ include("connection.php");
 	
 ?>
 <h1>Stop Results</h1>
+<?php 
+	if($numofrecords > 0) {
+		echo $numofrecords .' records returned';
+	}
+?>
 <table width="100%" border="1" cellspacing="1" cellpadding="4">
 	<tr>
 	<td width="30%">Stop number</td>
@@ -50,7 +56,7 @@ include("connection.php");
 	</tr>
 	<?php
 	
-	if(mysqli_num_rows($result1) > 0){
+	if($numofrecords > 0){
 		while($row = $result1->fetch_assoc()) 
 		{
 			echo 

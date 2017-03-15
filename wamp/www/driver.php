@@ -5,7 +5,7 @@ include("connection.php");
 
 <html>
 <head>
-	<title>Sample Page</title>
+	<title>Driver</title>
 </head>
 <body>
 
@@ -15,6 +15,7 @@ include("connection.php");
 
 	$init = 0;
 	$offday = 0;
+	$numofrecords = 0;
 	
 	if (isset($_POST['driver_submit'])){
 		
@@ -39,7 +40,8 @@ include("connection.php");
 								1 = '$init' and 
 								do.offday <> '$offday'
 								order by d.drivername, d.staffid");
-
+	
+	$numofrecords = mysqli_num_rows($result1);
 ?>
 
 <FORM NAME ="driver_service" METHOD ="POST" ACTION = "driver.php">
@@ -60,6 +62,11 @@ include("connection.php");
 	
 ?>
 <h1>Driver Results</h1>
+<?php 
+	if($numofrecords > 0) {
+		echo $numofrecords .' records returned';
+	}
+?>
 <table width="100%" border="1" cellspacing="1" cellpadding="4">
 	<tr>
 	<td width="25%">Staff ID</td>
@@ -69,7 +76,7 @@ include("connection.php");
 	</tr>
 	<?php
 	
-	if(mysqli_num_rows($result1) > 0){
+	if($numofrecords > 0){
 		while($row = $result1->fetch_assoc()) 
 		{
 			echo 
