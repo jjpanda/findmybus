@@ -4,10 +4,9 @@ include("connection.php");
 ?>
 
 <html>
-<head>
-	<title>Driver</title>
-</head>
-<body>
+<title>Driver</title>
+<link rel="stylesheet" href="w3.css">
+<body class="w3-container w3-padding-32">
 
 <a href="index.php">Back</a><p>
 
@@ -47,7 +46,7 @@ include("connection.php");
 <FORM NAME ="driver_service" METHOD ="POST" ACTION = "driver.php">
 	Work Day:
 	<select name="offday" onchange='this.form.submit()'>
-		<option value="0" <?php if (isset($_POST['offday']) && $_POST['offday']==8) {echo "selected='selected'"; } ?>>Select...</option>
+		<option value="0" <?php if (isset($_POST['offday']) && $_POST['offday']==8) {echo "selected='selected'"; } ?>>Select ...</option>
 		<option value="1" <?php if (isset($_POST['offday']) && $_POST['offday']==1) {echo "selected='selected'"; } ?>>Monday</option>
 		<option value="2" <?php if (isset($_POST['offday']) && $_POST['offday']==2) {echo "selected='selected'"; } ?>>Tuesday</option>
 		<option value="3" <?php if (isset($_POST['offday']) && $_POST['offday']==3) {echo "selected='selected'"; } ?>>Wednesday </option>

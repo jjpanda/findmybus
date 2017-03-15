@@ -4,10 +4,9 @@ include("connection.php");
 ?>
 
 <html>
-<head>
-	<title>Trip</title>
-</head>
-<body>
+<title>Trip</title>
+<link rel="stylesheet" href="w3.css">
+<body class="w3-container w3-padding-32">
 
 <a href="index.php">Back</a><p>
 
