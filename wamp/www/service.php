@@ -5,7 +5,7 @@ include("connection.php");
 
 <html>
 <head>
-	<title>Sample Page</title>
+	<title>Service</title>
 </head>
 <body>
 

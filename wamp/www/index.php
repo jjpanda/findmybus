@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Sample Page</title>
+	<title>Index</title>
 </head>
 <body>
 
