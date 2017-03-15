@@ -1,3 +1,5 @@
+use findmybus;
+
 #a:
 
 select
@@ -60,7 +62,7 @@ having count(t2.cancelled) = (
 	where 
 	t.cancelled = 1
 	group by t.servicenumber, t.routenumber
-	order by c_count desc limit 1)
+	order by c_count desc limit 1);
 
 
 
