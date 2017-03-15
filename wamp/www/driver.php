@@ -66,12 +66,12 @@ include("connection.php");
 		echo $numofrecords .' records returned';
 	}
 ?>
-<table width="100%" border="1" cellspacing="1" cellpadding="4">
+<table class="w3-table-all">
 	<tr>
-	<td width="25%">Staff ID</td>
-	<td width="25%">NRIC</td>
-	<td width="25%">Driver Name</td>
-	<td width="25%">License Number </td>
+	<th>Staff ID</th>
+	<th>NRIC</th>
+	<th>Driver Name</th>
+	<th>License Number </th>
 	</tr>
 	<?php
 	

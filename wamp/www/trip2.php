@@ -93,14 +93,14 @@ include("connection.php");
 		echo $numofrecords .' records returned';
 	}
 ?>
-<table width="100%" border="1" cellspacing="1" cellpadding="4">
+<table class="w3-table-all">
 	<tr>
-	<td width="16%">Trip Date</td>
-	<td width="16%">Trip Time</td>
-	<td width="16%">Route number</td>
-	<td width="16%">Driver Name</td>
-	<td width="16%">Bus plate number</td>
-	<td width="16%">Status</td>
+	<th>Trip Date</th>
+	<th>Trip Time</th>
+	<th>Route number</th>
+	<th>Driver Name</th>
+	<th>Bus plate number</th>
+	<th>Status</th>
 	</tr>
 	<?php
 	

@@ -63,11 +63,11 @@ include("connection.php");
 		echo $numofrecords1 .' records returned';
 	}
 ?>
-<table width="100%" border="1" cellspacing="1" cellpadding="4">
+<table class="w3-table-all">
 	<tr>
-	<td width="30%">Stop number</td>
-	<td width="30%">Stop location description</td>
-	<td width="30%">Stop order </td>
+	<th>Stop number</th>
+	<th>Stop location description</th>
+	<th>Stop order </th>
 	</tr>
 	<?php
 	

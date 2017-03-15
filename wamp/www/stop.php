@@ -47,11 +47,11 @@ include("connection.php");
 		echo $numofrecords .' records returned';
 	}
 ?>
-<table width="100%" border="1" cellspacing="1" cellpadding="4">
+<table class="w3-table-all">
 	<tr>
-	<td width="30%">Stop number</td>
-	<td width="30%">Stop address</td>
-	<td width="30%">Service numbers served </td>
+	<th>Stop number</th>
+	<th>Stop address</th>
+	<th>Service numbers served </th>
 	</tr>
 	<?php
 	
