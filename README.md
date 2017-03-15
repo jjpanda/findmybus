@@ -6,13 +6,13 @@
 3. In MYSQL console  
 ```mysql
 mysql> source c:\0_create.txt;  
-mysql> source c:\1_DDL.txt;  
+mysql> source c:\ddl.sql;  
 ```  
 #### Setup Web  
 1. Copy findmybus folder to local \wamp\www\*  
   
 #### Deliverables  
   
-Part 1 - DDL -> 1_DDL.txt  
-Part 2 - All 4 DML (a, b, c & d) questions -> 2_DML.txt  
+Part 1 - DDL -> ddl.sql  
+Part 2 - All 4 DML (a, b, c & d) questions -> dml.sql  
 Part 3 - php files -> \wamp\www\\*  
