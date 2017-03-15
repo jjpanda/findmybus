@@ -4,10 +4,8 @@ include("connection.php");
 ?>
 
 <html>
-
 <title>Service</title>
 <link rel="stylesheet" href="w3.css">
-
 <body class="w3-container w3-padding-32">
 
 <a href="index.php">Back</a><p>
@@ -50,9 +48,9 @@ include("connection.php");
 ?>
 
 <FORM NAME ="search_service" METHOD ="POST" ACTION = "service.php">
-	Service:
-	<INPUT TYPE = "TEXT" name = "servicenumber" value="<?php if(isset($_POST['servicenumber'])) { echo htmlentities ($_POST['servicenumber']); }?>"/>
-	<INPUT TYPE = "Submit" Name = "service_submit" VALUE = "Get Service Info">
+	<b>Service:</b>
+	<INPUT class="w3-input" TYPE = "TEXT" name = "servicenumber" value="<?php if(isset($_POST['servicenumber'])) { echo htmlentities ($_POST['servicenumber']); }?>"/><br>
+	<INPUT class="w3-button" TYPE = "Submit" Name = "service_submit" VALUE = "Get Service Info">
 </FORM>
 <?php
 	
@@ -99,11 +97,11 @@ include("connection.php");
 		echo '<h1>ROUTE 2</h1>';
 		echo $numofrecords1 .' records returned';
 		echo '
-			<table width="100%" border="1" cellspacing="1" cellpadding="4">
+			<table class="w3-table-all">
 				<tr>
-				<td width="30%">Stop number</td>
-				<td width="30%">Stop location description</td>
-				<td width="30%">Stop order </td>
+				<th>Stop number</th>
+				<th>Stop location description</th>
+				<th>Stop order </th>
 				</tr>';
 		while($row = $result2->fetch_assoc()) 
 		{

@@ -34,9 +34,9 @@ include("connection.php");
 ?>
 
 <FORM NAME ="stop_service" METHOD ="POST" ACTION = "stop.php">
-	Search Stops:
-	<INPUT TYPE = "TEXT" name = "stopnumber" value="<?php if(isset($_POST['stopnumber'])) { echo htmlentities ($_POST['stopnumber']); }?>"/>
-	<INPUT TYPE = "Submit" Name = "stop_submit" VALUE = "Stop Info">
+	<b>Search Stops:</b>
+	<INPUT class="w3-input" TYPE = "TEXT" name = "stopnumber" value="<?php if(isset($_POST['stopnumber'])) { echo htmlentities ($_POST['stopnumber']); }?>"/><br>
+	<INPUT class="w3-button" TYPE = "Submit" Name = "stop_submit" VALUE = "Stop Info">
 </FORM>
 <?php
 	

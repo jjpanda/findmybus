@@ -44,8 +44,8 @@ include("connection.php");
 ?>
 
 <FORM NAME ="driver_service" METHOD ="POST" ACTION = "driver.php">
-	Work Day:
-	<select name="offday" onchange='this.form.submit()'>
+	<b>Work Day:</b>
+	<select class="w3-select" name="offday" onchange='this.form.submit()'>
 		<option value="0" <?php if (isset($_POST['offday']) && $_POST['offday']==8) {echo "selected='selected'"; } ?>>Select ...</option>
 		<option value="1" <?php if (isset($_POST['offday']) && $_POST['offday']==1) {echo "selected='selected'"; } ?>>Monday</option>
 		<option value="2" <?php if (isset($_POST['offday']) && $_POST['offday']==2) {echo "selected='selected'"; } ?>>Tuesday</option>

@@ -64,8 +64,8 @@ include("connection.php");
 ?>
 
 <FORM NAME ="trip_service" METHOD ="POST" ACTION = "trip2.php">
-	Service:
-	<select name="servicenumber">
+	<b>Service:</b>
+	<select class="w3-select" name="servicenumber">
 		<?php 
 			$sql = $conn->query("Select distinct servicenumber from trip order by servicenumber * 1");
 			while ($row = $sql->fetch_assoc()){
@@ -75,14 +75,14 @@ include("connection.php");
 				echo "> {$row['servicenumber']} </option>";
 			}
 		?>
-	</select><br>
+	</select><p>
 	Date (yyyy-mm-dd)
-	<INPUT TYPE = "TEXT" name = "tripdate" value="<?php if(isset($_POST['tripdate'])) { echo htmlentities ($_POST['tripdate']); }?>"/><br>
+	<INPUT class="w3-input" TYPE = "TEXT" name = "tripdate" value="<?php if(isset($_POST['tripdate'])) { echo ($_POST['tripdate']); }?>"/><p>
 	Start Time (hh:mm)
-	<INPUT TYPE = "TEXT" name = "s_triptime" value="<?php if(isset($_POST['s_triptime'])) { echo htmlentities ($_POST['s_triptime']); }?>"/><br>
+	<INPUT class="w3-input" TYPE = "TEXT" name = "s_triptime" value="<?php if(isset($_POST['s_triptime'])) { echo ($_POST['s_triptime']); }?>"/><p>
 	End Time (hh:mm)
-	<INPUT TYPE = "TEXT" name = "e_triptime" value="<?php if(isset($_POST['e_triptime'])) { echo htmlentities ($_POST['e_triptime']); }?>"/><br>
-	<INPUT TYPE = "Submit" Name = "trip_submit" VALUE = "Get Trip">
+	<INPUT class="w3-input" TYPE = "TEXT" name = "e_triptime" value="<?php if(isset($_POST['e_triptime'])) { echo ($_POST['e_triptime']); }?>"/><p>
+	<INPUT class="w3-button" TYPE = "Submit" Name = "trip_submit" VALUE = "Get Trip">
 </FORM>
 <?php
 	
