@@ -9,7 +9,7 @@ mysql> source c:\0_create.txt;
 mysql> source c:\ddl.sql;  
 ```  
 #### Setup Web  
-1. Copy findmybus folder to local \wamp\www\*  
+1. Copy findmybus\wamp\www\\*   folder to local \wamp\www\\*   
   
 #### Deliverables  
   
