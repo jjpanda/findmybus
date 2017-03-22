@@ -27,7 +27,7 @@ include("connection.php");
 								from 
 								bus_stop bs left join bus_route br on bs.stopnumber = br.stopnumber
 								where 
-								(bs.StopNumber like '%$stopnumber%' or bs.StopNumber like '%$stopnumber' or bs.StopNumber like '$stopnumber%')
+								(bs.StopNumber like '%$stopnumber%')
 								group by bs.stopnumber");
 
 	$numofrecords = mysqli_num_rows($result1);
